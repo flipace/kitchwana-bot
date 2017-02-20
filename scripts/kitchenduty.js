@@ -20,8 +20,6 @@ module.exports = function (robot) {
   const mondaySchedule = later.parse.text('every monday at 9:00 am');
   later.setInterval(mondayReminder, mondaySchedule);
 
-  setTimeout(mondayReminder, 2000);
-
   function mondayReminder() {
     // first, clean up previous kitchen duty people!
     const data = getData(robot.brain);
@@ -41,7 +39,7 @@ module.exports = function (robot) {
       `Welcome back from the weekend! I'm awaiting kitchen duty assignees as soon as possible!`
     ];
 
-    robot.messageRoom('528892_lunch@conf.hipchat.com', mondayMessages[(Math.random() * mondayMessages.length + 1)]);
+    robot.messageRoom(publicId, mondayMessages[(Math.random() * mondayMessages.length + 1)]);
   }
 
   robot.respond(/who(.*)kitchen(.*)duty/i, function (res) {
