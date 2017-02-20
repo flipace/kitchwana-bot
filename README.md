@@ -20,7 +20,7 @@ upon have been set.
 
 You can start bot-kitchwana locally by running:
 
-    % bin/hubot
+    % HUBOT_HIPCHAT_JID=528892_767494@chat.hipchat.com HUBOT_HIPCHAT_PASSWORD=mypass bin/hubot
 
 You'll see some start up output and a prompt:
 
