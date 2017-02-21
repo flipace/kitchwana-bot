@@ -80,7 +80,7 @@ module.exports = function (robot) {
 
     console.log(`Asking about kitchen happiness at ${Date.now()} - Retry: ${typeof retry !== 'undefined' ? retry.toString() : 'no'}`);
 
-    if (typeof data.happinessAskedHistory === 'undefined') {
+    if (typeof data.askedHistory === 'undefined') {
       data.askedHistory = [];
     }
 
