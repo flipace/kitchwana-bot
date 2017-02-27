@@ -11,6 +11,8 @@
 //   flipace
 const later = require('later');
 
+later.date.localTime();
+
 const emptyData = {
   people: []
 };
@@ -30,7 +32,7 @@ function setData(data, brain) {
 module.exports = function (robot) {
   console.log(`Started Kitchwana at ${Date.now()}`);
 
-  const mondaySchedule = later.parse.text('at 9:00 am on Monday');
+  const mondaySchedule = later.parse.text('at 9:30 am on Monday');
   later.setInterval(mondayReminder, mondaySchedule);
 
   const mondayScheduleS = later.schedule(mondaySchedule).next(10);
