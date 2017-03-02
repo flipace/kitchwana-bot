@@ -102,7 +102,10 @@ module.exports = function (robot) {
       '3629678',
       '3495325',
       '3495219',
-      '3495226'
+      '3495226',
+      '4793221',
+      '4793329',
+      '4553605'
     ].filter(officer => officer !== lastAsked.userId);
 
     const randomOfficerIndex = Math.floor((Math.random() * kitchenOfficers.length));
