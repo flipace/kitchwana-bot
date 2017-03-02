@@ -59,6 +59,9 @@ module.exports = function (robot) {
     // first, clean up previous kitchen duty people!
     const data = getData(robot.brain);
 
+    if (typeof data.history === 'undefined') {
+      data.history = [];
+    }
     data.history.push(data.people);
     data.people = [];
 
